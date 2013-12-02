@@ -60,7 +60,7 @@
 
 打开 `/_layouts/post.html` 将分享链接中的 `place_your_url_here` 提换成博客地址。
 
-###　修改许可协议
+### 修改许可协议
 
 在 `/_layouts/post.html` 文件的分享链接部分声明博客内容所使用的许可协议，默认使用 [Attribution-NonCommercial-ShareAlike 3.0 Unported](http://creativecommons.org/licenses/by-nc-sa/3.0/)。
 
@@ -79,6 +79,12 @@ Disqus 评论加载比较慢，所以使用了 lazy-load 的方式，在 `/asset
 ## 已知问题
 
 1. 键盘 <kbd>Space</kbd> <kbd>PgUp</kbd> <kbd>PgDn</kbd> <kbd>↑</kbd> <kbd>↓</kbd> 等快捷键无效，这是由于当前的布局方式影响的。iOS7 Mobile Safari 自动隐藏地址栏也会无效。
+
+## Credits
+
+* [jquery-pjax](https://github.com/defunkt/jquery-pjax)
+* [NProgress.js](http://ricostacruz.com/nprogress/)
+* [Solarized Light Pygments CSS](https://gist.github.com/edwardhotchkiss/2005058)
 
 ## Copyright & License
 

@@ -25,6 +25,20 @@ var sidebar    = $('#sidebar'),
 // Tags switcher
 var clickHandler = function(k) {
   return function() {
+     
+    if($(this).attr('id')==$('.active').attr('id')){
+      if($('#posts-list').css('display')=='none'){
+        $('#posts-list').css('display','block');
+        $('#sidebar').css('width','585px')
+      }else{
+        $('#posts-list').css('display','none');
+        $('#sidebar').css('width','165px')
+      }
+    }else{
+      $('#posts-list').css('display','block');
+      $('#sidebar').css('width','585px')
+    }
+    
     $(this).addClass('active').siblings().removeClass('active');
     tag1.hide();
     window['tag'+k].delay(50).fadeIn(350);

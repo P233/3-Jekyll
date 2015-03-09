@@ -4,8 +4,8 @@ layout: default
 <article class="post container">
   <div class="post-meta">
     <span class="post-meta-span date">{{ page.date | date:"%Y %B %d" }}</span>
-    {% if page.categories.size > 0 %}
-    <span class="post-meta-span tag">{{ page.categories | join: ', ' }}</span>
+    {% if page.tags.size > 0 %}
+    <span class="post-meta-span tag">{{ page.tags | join: ', ' }}</span>
     {% endif %}
   </div>
 

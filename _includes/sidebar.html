@@ -12,8 +12,8 @@
 
     <ul id="sidebar-tags">
       <li class="sidebar-tag active" data-filter="all">全部文章</li>
-      {% for category in site.categories %}
-      <li class="sidebar-tag" data-filter="{{ category | first }}">{{ category | first }}</li>
+      {% for tag in site.tags %}
+      <li class="sidebar-tag" data-filter="{{ tag | first }}">{{ tag | first }}</li>
       {% endfor %}
     </ul>
   </div>
@@ -25,7 +25,7 @@
 
     <nav id="toc">
       {% for post in site.posts %}
-      <a class="toc-link" data-tags="{{ post.categories | join: ' ' }}" href="{{ post.url }}">
+      <a class="toc-link" data-tags="{{ post.tags | join: ' ' }}" href="{{ post.url }}">
         {{ post.title }}
       </a>
       {% endfor %}

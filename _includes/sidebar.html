@@ -12,9 +12,15 @@
 
     <ul id="sidebar-tags">
       <li class="sidebar-tag active" data-filter="all">全部文章</li>
-      {% for tag in site.tags %}
-      <li class="sidebar-tag" data-filter="{{ tag | first }}">{{ tag | first }}</li>
-      {% endfor %}
+      {% if site.filter == 'category' %}
+        {% for category in site.categories %}
+          <li class="sidebar-tag" data-filter="{{ category | first }}">{{ category | first }}</li>
+        {% endfor %}
+      {% elsif site.filter == 'tag' %}
+        {% for tag in site.tags %}
+          <li class="sidebar-tag" data-filter="{{ tag | first }}">{{ tag | first }}</li>
+        {% endfor %}
+      {% endif %}
     </ul>
   </div>
 
@@ -24,11 +30,19 @@
     </div>
 
     <nav id="toc">
-      {% for post in site.posts %}
-      <a class="toc-link" data-tags="{{ post.tags | join: ' ' }}" href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-      {% endfor %}
+      {% if site.filter == 'category' %}
+        {% for post in site.posts %}
+          <a class="toc-link" data-tags="{{ post.categories | join: ' ' }}" href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        {% endfor %}
+      {% elsif site.filter == 'tag' %}
+        {% for post in site.posts %}
+          <a class="toc-link" data-tags="{{ post.tags | join: ' ' }}" href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        {% endfor %}
+      {% endif %}
     </nav>
   </div>
 </aside>

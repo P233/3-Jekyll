@@ -50,6 +50,10 @@ $(function() {
       NProgress.done();
       main.scrollTop(0).addClass('fadeIn');
       menu.add(sidebar).removeClass('open');
+      {% if site.google_analytics %}
+      ga('set', 'location', window.location.href);
+      ga('send', 'pageview');
+      {% endif %}
     }
   });
 

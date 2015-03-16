@@ -19,7 +19,7 @@
 * 搜索功能
 * Webkit 换页动画
 * 改进文章筛选动画
-* 集成 Google Analytics
+* <del>集成 Google Analytics</del>
 * 文章时间，Category，Tag 归档页面
 * Favicon
 * Mobile touch swipe

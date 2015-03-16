@@ -23,7 +23,11 @@ filter: 'tag'
 
 
 # Comment
-# disqus_shortname:
+# disqus_shortname: discussion_shortname
+
+
+# Google Analytics
+# google_analytics: tracking_ID
 
 
 # Build settings

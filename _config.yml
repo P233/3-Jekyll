@@ -20,7 +20,11 @@ filter: 'tag'
 # github:   username
 # codepen:  username
 # dribbble: username
-
+twitter:
+weibo:
+github:
+codepen:
+dribbble:
 
 # Comment
 # disqus_shortname: discussion_shortname

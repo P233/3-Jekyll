@@ -12,7 +12,7 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 # Sidebar filter
 # Choose 'tag' or 'category' as filter in sidebar.
 filter: 'tag'
-
+highlighter: rouge
 
 # Social account
 # twitter:  username

@@ -6,4 +6,4 @@ categories: 文章
 tags: 文章
 ---
 
-Hello World
+Welcome to Blackwuxin's blog!

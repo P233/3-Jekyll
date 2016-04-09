@@ -9,7 +9,7 @@ url: "http://blackwuixn.github.io" # the base hostname & protocol for your site
 
 # Sidebar filter
 # Choose 'tag' or 'category' as filter in sidebar.
-filter: 'tag'
+filter: 'category'
 
 
 # Social account

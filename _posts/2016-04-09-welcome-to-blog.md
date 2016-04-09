@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Welcome to blackwuxin's blog!"
-date:   2015-03-08 22:21:49
+title:  "前端学习笔记-01"
+date:   2015-04-09 22:21:49
 categories: 文章
 tags: 文章
 ---

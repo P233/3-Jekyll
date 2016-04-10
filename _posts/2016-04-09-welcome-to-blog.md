@@ -40,6 +40,7 @@ Rendering Tree 渲染树并不等同于 DOM 树，因为一些像 Header 或 dis
 CSS 的 Rule Tree 主要是为了完成匹配并把 CSS Rule 附加上 Rendering Tree 上的每个 Element。也就是 DOM 结点。也就是所谓的 Frame。
 然后，计算每个 Frame（也就是每个 Element）的位置，这又叫 layout 和 reflow 过程。  
 3）最后通过调用操作系统 Native GUI 的 API 绘制。  
+
 这里重要要说两个概念，一个是 Reflow，另一个是 Repaint。这两个不是一回事。
 Repaint——屏幕的一部分要重画，比如某个 CSS 的背景色变了。但是元素的几何尺寸没有变。
 Reflow——意味着元件的几何尺寸变了，我们需要重新验证并计算 Render Tree。是 Render Tree 的一部分或全部发生了变化。这就是 Reflow，或是 Layout。（HTML 使用的是 flow based layout，也就是流式布局，所以，如果某元件的几何尺寸发生了变化，需要重新布局，也就叫 reflow）reflow 会从 <html> 这个 root frame 开始递归往下，依次计算所有的结点几何尺寸和位置，在 reflow 过程中，可能会增加一些 frame，比如一个文本字符串必需被包装起来。

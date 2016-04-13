@@ -53,13 +53,10 @@
 <span class="STYLE1"> 默默走过了</span>
                   <div id="clock"></div>
               </div>
-                <canvas id="canvas" width="1100" height="680"></canvas>
             </div>
             
         </div>
-    
-    <script>
-    </script>
+
 
     <script>
     (function(){
@@ -217,61 +214,7 @@
         runAsync().start();
     })();
     </script>
-	<script>
-        var imgUrl = "http://www.hacker-noelle.com/10ve/logo.jpg";
-        var lineLink = "http://hacker-noelle.com/10ve/Dear.php?me=%e4%bd%a0%e4%ba%b2%e7%88%b1%e7%9a%84%e5%b0%8f%e9%9d%9e&you=%e5%b0%8f%e8%95%be&yi=%e5%ae%9d%e8%b4%9d%ef%bc%8c%e8%af%b4%e5%ae%9e%e8%af%9d%ef%bc%8c%e4%b8%8d%e7%9f%a5%e4%b8%8d%e8%a7%89%e6%88%91%e4%bb%ac%e5%b7%b2%e7%bb%8f%e8%ae%a4%e8%af%86%e4%ba%86%e4%b8%80%e6%ae%b5%e6%97%b6%e9%97%b4%e4%ba%86%ef%bc%8c%e7%9f%a5%e9%81%93%e5%90%97%ef%bc%8c%e8%ae%a4%e8%af%86%e4%bd%a0%e7%9a%84%e8%bf%99%e4%ba%9b%e6%97%a5%e5%ad%90%e6%98%af%e6%88%91%e8%bf%99%e8%be%88%e5%ad%90%e6%9c%80%e5%b9%b8%e7%a6%8f%e7%9a%84%e6%97%b6%e9%97%b4%ef%bc%8c%e6%83%85%e4%ba%ba%e8%8a%82%e5%bf%ab%e5%88%b0%e4%ba%86%ef%bc%8c%e4%bd%86%e6%98%af%e6%88%91%e4%b8%8d%e8%83%bd%e9%99%aa%e4%bc%b4%e5%88%b0%e4%bd%a0%e8%ba%ab%e8%be%b9%ef%bc%8c%e6%89%80%e4%bb%a5%e8%8a%b1%e4%ba%86%e5%bf%ab%e4%b8%80%e5%a4%a9%e7%9a%84%e6%97%b6%e9%97%b4%e5%81%9a%e4%ba%86%e8%bf%99%e4%b8%aa%e5%8d%a1%e7%89%87%e9%80%81%e7%bb%99%e4%bd%a0%ef%bc%8c%e8%bf%98%e7%89%b9%e6%84%8f%e9%80%89%e4%ba%86%e4%b8%80%e9%a6%96%e6%ad%8c%e5%90%ac%e7%9d%80%e5%be%88%e8%88%92%e6%9c%8d%e7%9a%84%e5%91%a2%ef%bc%8c%e6%9c%80%e5%90%8e%e6%88%91%e6%83%b3%e5%af%b9%e4%bd%a0%e8%af%b4%ef%bc%9aI+Love+U+&wu=%e6%88%91%e7%9c%9f%e7%9a%84%e5%a5%bd%e6%83%b3%e5%a5%bd%e6%83%b3%e4%bd%a0&year=2014&yue=7&ri=12&submit=";
-        var descContent = '亲爱的林大人：\n快打开卡片，感受 TA 的心意吧！';
-        var shareTitle = '你亲爱的林大人给您寄送了一张生日卡片哟！';
-        var appid = '';
-         
-        function shareFriend() {
-            WeixinJSBridge.invoke('sendAppMessage',{
-                "appid": appid,
-                "img_url": imgUrl,
-                "img_width": "200",
-                "img_height": "200",
-                "link": lineLink,
-                "desc": descContent,
-                "title": shareTitle
-            }, function(res) {
-                //_report('send_msg', res.err_msg);
-            })
-        }
-        function shareTimeline() {
-            WeixinJSBridge.invoke('shareTimeline',{
-                "img_url": imgUrl,
-                "img_width": "200",
-                "img_height": "200",
-                "link": lineLink,
-                "desc": descContent,
-                "title": shareTitle
-            }, function(res) {
-                   //_report('timeline', res.err_msg);
-            });
-        }
-        function shareWeibo() {
-            WeixinJSBridge.invoke('shareWeibo',{
-                "content": descContent,
-                "url": lineLink,
-            }, function(res) {
-                //_report('weibo', res.err_msg);
-            });
-        }
-        // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
-        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-            // 发送给好友
-            WeixinJSBridge.on('menu:share:appmessage', function(argv){
-                shareFriend();
-            });
-            // 分享到朋友圈
-            WeixinJSBridge.on('menu:share:timeline', function(argv){
-                shareTimeline();
-            });
-            // 分享到微博
-            WeixinJSBridge.on('menu:share:weibo', function(argv){
-                shareWeibo();
-            });
-        }, false);
+
 </script>
 </body>
 </html>

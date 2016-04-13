@@ -9,7 +9,7 @@
 #loveu{padding:5px;font-size:22px;margin-top:80px;margin-right:120px;text-align:right;display:none}
 #loveu .signature{margin-top:10px;font-size:20px;font-style:italic}
 #clickSound{display:none}
-#code{float:left;width:440px;height:400px;color:#333;font-family:"Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";font-size:12px}
+#code{float:left;width:440px;height:400px;color:#333;font-family:"Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";font-size:20px}
 #code .string{color:#2a36ff}
 #code .keyword{color:#7f0055;font-weight:bold}
 #code .placeholder{margin-left:15px}#code .space{margin-left:7px}

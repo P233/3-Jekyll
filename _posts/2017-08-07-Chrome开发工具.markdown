@@ -1,19 +1,17 @@
-# Chrome开发工具
-
 
 ---
 #### 控制台切换主题（黑／白）
-```
+
 控制台三点图标  setting > preferences > Appearance > Theme ： 可以选（light白/dark黑）
-```
+
 
 #### 将打印的对象存储为全局变量
     
-    有时候想在控制台操作一些数据，结果太麻烦，这时候只需要在console.log() 打印之后鼠标右键 > Store As Global Variable就可以存储为一个temp1的全局变量，然后随君操作。
+有时候想在控制台操作一些数据，结果太麻烦，这时候只需要在console.log() 打印之后鼠标右键 > Store As Global Variable就可以存储为一个temp1的全局变量，然后随君操作。
 
 #### 动画工具 Animations
 
-    控制台三点图标 more tools > Animations 可以开启动画调试工具、可以暂停、放慢查看动画的运行轨迹，动画查看器允许你单独控制每个属性的时间曲线！
+控制台三点图标 more tools > Animations 可以开启动画调试工具、可以暂停、放慢查看动画的运行轨迹，动画查看器允许你单独控制每个属性的时间曲线！
 
 #### 模拟元素伪态
 

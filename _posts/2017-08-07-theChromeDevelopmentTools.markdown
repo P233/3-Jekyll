@@ -1,4 +1,8 @@
 ---
+layout: post
+title: Chrome开发工具
+tags: 工具
+---
 #### 控制台切换主题（黑／白）
 
 控制台三点图标  setting > preferences > Appearance > Theme ： 可以选（light白/dark黑）

@@ -1,8 +1,8 @@
 # Site settings
-title: 黑盒子白盒子
+title: 半壶纱
 email: box.zhou@foxmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  鸡蛋是个好东西它能补脑，能补脑，还能补脑～
+  倘若我心中的山水 你眼中都看到
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yueting.site" # the base hostname & protocol for your site
 

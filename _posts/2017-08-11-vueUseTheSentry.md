@@ -18,7 +18,8 @@ Sentry 是一个开源的实时错误报告工具，支持 web 前后端、移�
 [Sentry Vue 文档][1] 此插件仅适用于Vue 2.0或更高版本。
 
 Sentry官方集成了vue，但是官方文档在vue中的使用说明只有寥寥几行，仅仅说明了如何引入与集成简单的两步。
-**如下：**
+
+####**官方使用如下：**
 
 **1.安装**
 ```js
@@ -38,16 +39,68 @@ Raven
     .install();
     
 ```
-
 ![此处输入图片的描述][2]
 
-### 四、为什么要用Sentry
-......
 
+#### **Vue项目实际使用：**
+```js
+// 安装
+npm install raven-js --save
+
+// 配置：在helper目录下新建error-reporting.js
+import Vue from 'vue'
+import Raven from 'raven-js'
+import RavenVue from 'raven-js/plugins/vue'
+
+const PROCESS_ENV = process.env.NODE_ENV
+const isProduction = PROCESS_ENV === 'production'
+const ignoreUrls = ['127.0.0.1', 'localhost']
+
+// 2 prod  3 dev
+let sentryUrl = isProduction ? 'https://1c20403dff0e42cd9d3b7b5fc2af851e@sentry.io/202597' : 'https://1c20403dff0e42cd9d3b7b5fc2af851e@sentry.io/202597'
+
+export default {
+  init () {
+    Raven
+      .config(sentryUrl, {
+        release: process.env.RELEASE_VERSION,
+        environment: PROCESS_ENV,
+        ignoreUrls: ignoreUrls
+      })
+      .addPlugin(RavenVue, Vue)
+      .install()
+  },
+  captureException (...args) {
+    if (isProduction) {
+      return Raven.captureException(...args)
+    }
+  }
+}
+
+// 同级index.js引用
+export const $errReport = require('./error-reporting.js').default
+
+// 在main.js 引用
+import { $errReport } from 'helper'
+
+// 初始化sentry错误报告
+$errReport.init()
+
+// 在ajax.js收集错误信息
+import { $errReport } from 'helper'
+$errReport.captureException(error)
+```
+
+
+### 四、为什么要用Sentry
+我不知道......
+
+
+
+  
+  
 
 
   [1]: https://docs.sentry.io/clients/javascript/integrations/vue/
   [2]: http://ouiqhbcw9.bkt.clouddn.com/_dji_screenshot_1502450515262.png
-  
-  
-  
+  [3]: http://ouiqhbcw9.bkt.clouddn.com/_dji_screenshot_1502456662142.png

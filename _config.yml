@@ -34,3 +34,5 @@ sass:
   style: compressed
 gems:
   - jekyll-sitemap
+
+theme: jekyll-theme-cayman

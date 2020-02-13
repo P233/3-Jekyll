@@ -59,12 +59,6 @@
     <script type="text/javascript">
       var offsetX = $("#loveHeart").width() / 2;
       var offsetY = $("#loveHeart").height() / 2 - 55;
-      var together = new Date();
-      together.setFullYear(2019, 6, 6);
-      together.setHours(0);
-      together.setMinutes(0);
-      together.setSeconds(0);
-      together.setMilliseconds(0);
 
       if (!document.createElement("canvas").getContext) {
         var msg = document.createElement("div");
@@ -80,7 +74,7 @@
         setTimeout(function() {
           startHeartAnimation();
         }, 0);
-
+        together = "2019-06-06";
         timeElapse(together);
         setInterval(function() {
           timeElapse(together);
